@@ -1,0 +1,56 @@
+<mvc:View
+    controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Table 
+        id='invoiceList'
+        class="sapUiLargeMarginBeginEnd"
+        width="auto"
+        items="{invoice>/}">
+            <headerToolbar>
+                <Toolbar class="sapUiSmallMarginTop sapUiSmallMarginBottom">
+                    <ToolbarSpacer />
+                    <SearchField width="50%" search=".onFilterInvoices"
+                    />
+                </Toolbar>
+            </headerToolbar>
+            <items>
+                <ColumnListItem 
+                    title="{invoice>title} x {invoice>completed}"
+                    >
+
+                    <cells>
+                        <Text text="{invoice>id}" id="__text0"/>
+                        <Text text="{invoice>title}" id="__text1"/>
+                        <CheckBox valueState="Error" enabled="false" selected="{invoice>completed}" />
+                        <Button icon="sap-icon://detail-view" class="sapUiSmallMarginEnd increaseFont" press=".onPress" type="Transparent" />             
+                    </cells>
+
+                </ColumnListItem>
+            </items>
+            <columns>
+                <Column id="__column0">
+                    <header>
+                        <Label text="Id" id="__label0"/>
+                    </header>
+                </Column>
+                <Column id="__column1">
+                    <header>
+                        <Label text="Título" id="__label1"/>
+                    </header>
+                </Column>
+                <Column id="__column2">
+                    <header>
+                        <Label text="Completado" id="__label2"/>
+                    </header>
+                </Column>
+                <Column id="__column3">
+                    <header>
+                        <Label text="Detalhes" id="__label3"/>
+                    </header>
+                </Column>
+
+            </columns>
+        </Table>
+</mvc:View>

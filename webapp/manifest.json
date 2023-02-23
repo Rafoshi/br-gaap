@@ -1,0 +1,86 @@
+{
+	"sap.app": {
+		"id": "sap.brgaap",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"dependencies": {
+			"libs": {
+				"sap.f": {},
+				"sap.m": {}
+			}
+
+		},
+		"models": {
+			"invoice": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "https://jsonplaceholder.typicode.com/todos"
+			},
+			"": {
+				"dataSource": "<dataSourceAlias>",
+				"settings": {}
+			}
+		},
+		"rootView": {
+			"viewName": "sap.ui.demo.walkthrough.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"handleValidation": false,
+		"config": {
+
+		},
+		"routing": {
+			"config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "sap.ui.demo.walkthrough.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "detail/{invoicePath}",
+                    "name": "detail",
+                    "target": "detail"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "viewId": "overview",
+                    "viewName": "Overview"
+                },
+                "detail": {
+                    "viewId": "detail",
+                    "viewName": "Detail"
+                }
+            }
+		},
+		"extends": {
+			"component": "<extendedComponentId>",
+			"minVersion": "<minComp1Version>",
+			"extensions": {}
+		},
+		"contentDensities": {
+			"compact": false,
+			"cozy": false
+		}
+	}
+}

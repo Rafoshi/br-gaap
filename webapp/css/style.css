@@ -1,0 +1,28 @@
+.sapMBar{
+    height: 5rem !important;
+}
+
+#__toolbar0, #__toolbar1, #__toolbar2{
+    padding-top: 6vh !important;
+    padding-bottom: 2.5vh !important;
+}
+
+.sapMLIBShowSeparator>td, .sapMColumnHeader {
+    border-right: 2px solid#e5e5e5;
+}
+
+#__xmlview0--invoiceList-listUl{
+    border-left: 2px solid #e5e5e5;
+}
+
+.sapUiSmallMarginBottom {
+    margin-bottom: 0 !important;
+}
+
+.sapMListTblCell+td+td+td {
+    text-align: right !important;
+}
+
+#__xmlview0--__column3-ah{
+    justify-content: end !important;
+}

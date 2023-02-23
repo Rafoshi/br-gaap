@@ -1,0 +1,20 @@
+<mvc:View
+    controllerName="sap.ui.demo.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page title="OverView">
+
+        <customHeader >
+            <Bar>
+                <contentLeft>
+                    <Image src="images/logo.png" class="sapUiLargeMarginBegin sapUiTinyMarginTopBottom"></Image>
+                </contentLeft>
+            </Bar>
+        </customHeader>
+
+        <content>
+            <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.InvoiceList" />
+        </content>
+    
+    </Page>
+</mvc:View>
